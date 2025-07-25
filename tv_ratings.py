@@ -1,5 +1,5 @@
 # This function takes a TV's attributes and calculates a score and tier (A/B/C)
-def main(tv, price, inch, screen):
+def tv_ratings(tv, price, inch, screen):
     score = 0  # Start the score at 0
 
     # Evaluate price and adjust score accordingly
@@ -37,7 +37,7 @@ def main(tv, price, inch, screen):
     else:
         tier = "C"
 
-    # Return all important results as a tuple
+    # Return all important results
     return (tv, tier, score)
 
 
@@ -45,10 +45,10 @@ def main(tv, price, inch, screen):
 tv_results = []
 
 # Add TVs manually to the list using the main() function
-tv_results.append(main("lg", 35000, 65, "oled"))
-tv_results.append(main("samsung", 40000, 55, "led"))
-tv_results.append(main("tcl", 18000, 55, "qled"))
-tv_results.append(main("sony", 25000, 50, "mini led"))
+tv_results.append(tv_ratings("lg", 35000, 65, "oled"))
+tv_results.append(tv_ratings("samsung", 40000, 55, "led"))
+tv_results.append(tv_ratings("tcl", 18000, 55, "qled"))
+tv_results.append(tv_ratings("sony", 25000, 50, "mini led"))
 
 # Sort the list by score in descending order (best score first)
 sorted_by_score = sorted(tv_results, key=lambda x: x[2], reverse=True)
