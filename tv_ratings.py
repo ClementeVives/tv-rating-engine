@@ -54,6 +54,6 @@ tv_results.append(tv_ratings("sony", 25000, 50, "mini led"))
 sorted_by_score = sorted(tv_results, key=lambda x: x[2], reverse=True)
 
 # Display the results in a clean, readable format
-print("📊 TVs sorted by score:")
+print("TVs sorted by score:")
 for name, tier, score in sorted_by_score:
     print(f"- {name}: rating: {tier}, score: {score}")
