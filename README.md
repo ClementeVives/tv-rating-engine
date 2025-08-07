@@ -13,7 +13,7 @@ It uses basic Python structures like functions, lists, sorting with lambdas, and
 - Scores based on:
   - Price range
   - Screen size
-  - Panel type (OLED, Mini LED, QLED, etc.)
+  - Panel type (OLED, Mini LED, QLED)
 - Outputs a clean comparison list
 - Sorts TVs automatically by score
 
