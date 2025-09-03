@@ -2,7 +2,7 @@
 def tv_ratings(tv, price, inch, screen):
     score = 0  # Start the score at 0
 
-    # Evaluate price and adjust score accordingly
+# Evaluate price and adjust score accordingly
     if price <= 20000:
         score += 3  # Excellent price
     elif price <= 30000:
@@ -10,7 +10,7 @@ def tv_ratings(tv, price, inch, screen):
     else:
         score -= 1  # Too expensive
 
-    # Evaluate screen size and adjust score
+# Evaluate screen size and adjust score
     if inch < 55:
         score -= 1  # Small screen
     elif inch == 55:
@@ -18,7 +18,7 @@ def tv_ratings(tv, price, inch, screen):
     else:
         score += 2  # Large screen is better
 
-    # Dictionary mapping screen types to score values
+# Dictionary mapping screen types to score values
     screen_scores = {
         "mini led": 2,
         "oled": 2,
@@ -26,10 +26,10 @@ def tv_ratings(tv, price, inch, screen):
         "led": -1  # Lowest-rated screen type
     }
 
-    # Add screen type points using dictionary lookup (default to 0 if not found)
+# Add screen type points using dictionary lookup (default to 0 if not found)
     score += screen_scores.get(screen.lower(), 0)
 
-    # Determine the tier based on final score
+# Determine the tier based on final score
     if score >= 4:
         tier = "A"
     elif score >= 2:
@@ -37,7 +37,7 @@ def tv_ratings(tv, price, inch, screen):
     else:
         tier = "C"
 
-    # Return all important results
+# Return all important results
     return (tv, tier, score)
 
 
