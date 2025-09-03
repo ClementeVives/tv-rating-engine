@@ -18,3 +18,8 @@ It uses basic Python structures like functions, lists, sorting with lambdas, and
 - Sorts TVs automatically by score
 
 ## Example Output
+📊 TVs sorted by score:
+- tcl: rating: A, score: 5
+- lg: rating: B, score: 3
+- sony: rating: B, score: 2
+- samsung: rating: C, score: -1
